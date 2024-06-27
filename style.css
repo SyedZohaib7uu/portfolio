@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 
 ::selection{
@@ -7,14 +6,14 @@
     color: white;
 }
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html , body{
+html, body{
     height: 100%;
     width: 100%;
     font-family: "Mukta", sans-serif;
@@ -23,9 +22,8 @@ html , body{
 }
 .main{
     width: 100%;
-    /* overflow: hidden; */
-    height: 100vh;
-  background-color: #fff;
+    height: 100%;
+    background-color: #fff;
 }
 #full{
     display: none;
@@ -47,7 +45,6 @@ nav {
     transition: background-color 0.5s, transform 4s;
     z-index: 10;
 }
-
 nav::before {
     content: '';
     position: absolute;
@@ -59,9 +56,8 @@ nav::before {
     transform: scaleY(0);
     transform-origin: top;
     z-index: -1;
-    transition: transform 0.5s; /* Adjust the duration to control the speed of the transform */
+    transition: transform 0.5s;
 }
-
 nav:hover::before {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     transform: scaleY(1);
@@ -83,41 +79,43 @@ nav .sec-1 img{
     cursor: pointer;
     border: 0.3px solid black;
     transition: 0.3s;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;}
-    nav .sec-1 img:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+nav .sec-1 img:hover{
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     border: 2px solid rgb(0, 255, 0);
-    
-}nav .sec-2{
-display: flex;
-justify-content: center;
-gap: 30px;
-
+}
+nav .sec-2{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 .links{
     color: black;
     text-decoration: none;
     font-weight: 600;
-    font-size: 20px
-    ;transition: 0.3s;
-    
-}.links:hover{
+    font-size: 20px;
+    transition: 0.3s;
+}
+.links:hover{
     color: rgba(0, 0, 0, 0.791);
-}   #menu{
+}
+#menu{
     color: black;
     cursor: pointer;
     transition: 0.3s;
     font-size: 35px;
-}#menu:hover{
-   color:  rgba(0, 0, 0, 0.791);;
-  
-   background: transparent;
+}
+#menu:hover{
+    color: rgba(0, 0, 0, 0.791);
+    background: transparent;
 }
 body::-webkit-scrollbar{
     background-color: transparent;
-}body::-webkit-scrollbar-thumb{
-   background: linear-gradient(red,blue,green);
-   border-radius: 20px;
+}
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(red,blue,green);
+    border-radius: 20px;
 }
 #full{
     height: 100%;
@@ -127,14 +125,10 @@ body::-webkit-scrollbar{
     top: 0;
     right: -40%;
     background-color:rgba(230, 216, 216, 0.774);
-
-  -webkit-backdrop-filter: blur(50px);
-  backdrop-filter: blur(5px);
-padding: 80px 50px;
-
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(5px);
+    padding: 80px 50px;
 }
-
-
 #full i {
     position: absolute;
     top: 0%;
@@ -153,42 +147,34 @@ padding: 80px 50px;
     padding: 20px 0px;
     border-bottom: 2px solid white;
     cursor: pointer;
-}.header{
+}
+.header{
     width: 100%;
-/* background-color: red; */
-height: 70px;
+    height: 70px;
 }
 
-
-
-
-
-
-
-
-/* 
- font-family: "Permanent Marker", cursive;
-  font-weight: 400;
-  font-style: normal;  */
-  
-  .home{
-    width: 100%;
+.home{
     height: 70vh;
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 0px 18vw;
-position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 18vw;
+    position: relative;
 }
-.curp{
+.curp {
     position: absolute;
     padding: 1vw;
     font-weight: 700;
     background-color: #000;
     border: 1px solid black;
-    z-index: 9;
+    z-index: 2;
     border-radius: 100%;
+    transition: background-image 0.3s, background-color 0.3s;
+}
+.sechome-1:hover ~ .curp {
+    background-size: cover;
+    background-color: transparent;
 }
 .sechome-1{
     border: 1px solid black;
@@ -198,17 +184,13 @@ position: relative;
     transition: transform 4s;
     z-index: 1;
     position: relative;
-    
     background-image: url('./pixlr-image-generator-d89ff724-184e-4a5e-ac3f-ab1b7642cca8.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* .sechome-1:hover{ */
- /* } */
-
- .sechome-1 a ,.tag,.l{
-   color: #fff;
+.sechome-1 a ,.tag,.l{
+    color: #fff;
 }
 .sechome-1 p{
     color: #fff;
@@ -222,10 +204,12 @@ position: relative;
     border-radius: 5px;
     padding: 1vw 0px;
     color: white;
-}.tabb{
+}
+.tabb{
     display: flex;
     justify-content: center;
-}.tag{
+}
+.tag{
     transition: all ease-in-out 0.3s;
     box-shadow: 10px 0px 100px 30px rgb(0, 255, 0);
 }
@@ -237,16 +221,59 @@ position: relative;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
-    
-}#clo{
+}
+#clo{
     cursor: pointer;
 }
 .overlay{
     width: 65%;
     height: 200px;
     height: 100%;
-  
-    /* background-color: red; */
     position: absolute;
     z-index: 10;
+}
+
+/* Added rule */
+.curp:hover ~ .home .sechome-1 {
+    z-index: 3;
+}
+#moving-text{
+    /* background-color: lightblue; */
+    white-space: nowrap;
+    font-size: 9vw;
+    overflow-x: auto;
+}.con{
+   
+    display: inline-block;
+    white-space: nowrap;
+
+
+animation: move;
+animation-duration: 10s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+
+
+}.con h1{
+    /* display: inline-block; */
+    /* background-color: gainsboro; */
+    color: black;
+    display: inline-block;
+    font-size: 8vw;
+}#gola{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1vw;
+    background-color: #FE320A;
+}#moving-text::-webkit-scrollbar{
+    display: none;
+}@keyframes move{
+    from{
+transform:translateX(0);
+}to{
+        transform:translateX(-100%);
+
+    }
 }
