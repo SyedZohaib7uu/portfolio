@@ -14,7 +14,7 @@ body{
     box-sizing: border-box;
 }
 html, body{
-    height: 100%;
+    height: 160%;
     width: 100%;
     font-family: "Mukta", sans-serif;
     font-weight: 200;
@@ -24,11 +24,13 @@ html, body{
     width: 100%;
     height: 100%;
     background-color: #fff;
+    z-index: 10000009;
 }
 #full{
     display: none;
 }
 nav {
+    position: fixed;
     padding-top: 10px;
     width: 100%;
     border-bottom: 1px solid #282c25;
@@ -43,7 +45,7 @@ nav {
     overflow: hidden;
     background: rgb(255, 255, 255);
     transition: background-color 0.5s, transform 4s;
-    z-index: 10;
+    z-index: 10000;
 }
 nav::before {
     content: '';
@@ -105,6 +107,7 @@ nav .sec-2{
     cursor: pointer;
     transition: 0.3s;
     font-size: 35px;
+    z-index: 10000;
 }
 #menu:hover{
     color: rgba(0, 0, 0, 0.791);
@@ -120,8 +123,8 @@ body::-webkit-scrollbar-thumb{
 #full{
     height: 100%;
     width: 40%;
-    position: absolute;
-    z-index: 100;
+    position: fixed;
+    z-index: 10000;
     top: 0;
     right: -40%;
     background-color:rgba(230, 216, 216, 0.774);
@@ -153,14 +156,9 @@ body::-webkit-scrollbar-thumb{
     height: 70px;
 }
 
-.home{
-    height: 70vh;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 18vw;
-    position: relative;
+
+#clo{
+    cursor: pointer;
 }
 .curp {
     position: absolute;
@@ -172,66 +170,7 @@ body::-webkit-scrollbar-thumb{
     border-radius: 100%;
     transition: background-image 0.3s, background-color 0.3s;
 }
-.sechome-1:hover ~ .curp {
-    background-size: cover;
-    background-color: transparent;
-}
-.sechome-1{
-    border: 1px solid black;
-    padding: 3vw;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: transform 4s;
-    z-index: 1;
-    position: relative;
-    background-image: url('./pixlr-image-generator-d89ff724-184e-4a5e-ac3f-ab1b7642cca8.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.sechome-1 a ,.tag,.l{
-    color: #fff;
-}
-.sechome-1 p{
-    color: #fff;
-    z-index: 100;
-    position: relative;
-}
-.tag{
-    width: 500px;
-    text-align: center;
-    background-color: rgba(81, 255, 0, 0.877);
-    border-radius: 5px;
-    padding: 1vw 0px;
-    color: white;
-}
-.tabb{
-    display: flex;
-    justify-content: center;
-}
-.tag{
-    transition: all ease-in-out 0.3s;
-    box-shadow: 10px 0px 100px 30px rgb(0, 255, 0);
-}
-#down{
-    padding: 1vw 2vw;
-    border: none;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-#clo{
-    cursor: pointer;
-}
-.overlay{
-    width: 65%;
-    height: 200px;
-    height: 100%;
-    position: absolute;
-    z-index: 10;
-}
+
 
 /* Added rule */
 .curp:hover ~ .home .sechome-1 {
@@ -277,3 +216,27 @@ transform:translateX(0);
 
     }
 }
+
+    .counter{
+         color: white;
+font-size: 50vh;
+position: fixed;
+width: 100%;height: 85%;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+} 
+.overlay{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    display: flex;
+}
+
+.bar{
+    width: 10vw;
+    height: 100vh;
+    background-color: #1a1a1a;
+    } 

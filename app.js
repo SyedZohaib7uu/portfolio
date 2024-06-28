@@ -30,25 +30,44 @@ document.getElementById("clo").addEventListener("click",()=>{
     tl.reverse()
     
 })
-    var main= document.querySelector(".main")
-var cur = document.querySelector(".curp")
-var sechome = document.querySelector(".overlay")
-main.addEventListener("mousemove",(det)=>{
-gsap.to(cur,{
-    x:det.x+50+"px",
-    y:det.y+50+"px",
-    duration:0.3,
-   ease: "bounce.out",
 
+
+
+function startLoader(){
+    let counterElement= document.querySelector(".counter")
+    let curee=0
+    function update(){
+        if(curee===100){
+            setTimeout(() => {
+                document.querySelector(".overlay").style.display="none"
+            }, 3000);
+        }
+        curee+=Math.floor(Math.random()*10)+1   
+        if(curee>100){
+            curee=100
+        }
+        counterElement.textContent=curee+" %"
+        let delay = Math.floor(Math.random()*200)+50;
+        setTimeout(update,delay)
+    }
+    update()
+}
+
+
+
+
+        startLoader()
+
+gsap.to(".counter",1,{
+    delay:6,
+    opacity:0,
 })
+gsap.to(".bar",1.5,{
+    delay:3.5,
+    height:0,
+    stagger:{
+        amount:0.5
+    },
+    ease:"power4.inOut",
 })
-sechome.addEventListener("mouseenter",()=>{
-    gsap.to(cur,{
-        scale:3,
-    })
-})
-sechome.addEventListener("mouseleave",()=>{
-    gsap.to(cur,{
-        scale:1,
-    })
-})
+    
